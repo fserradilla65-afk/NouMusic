@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in contributing to [NouTube](https://github.com/nonbili/NouTube) !
+Thank you for your interest in contributing to [NouMusic](https://github.com/fserradilla65-afk/NouMusic) !
 
 Please read this guide before submitting changes.
 

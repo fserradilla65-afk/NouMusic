@@ -1,6 +1,6 @@
-# <img src="desktop/icon.png" align="top" height="44"> NouTube
+# <img src="desktop/icon.png" align="top" height="44"> NouMusic
 
-Android and Desktop app for YouTube and YouTube Music.
+Android and Desktop app for YouTube Music.
 
 Install from F-Droid, or download APK from GitHub.
 
@@ -10,9 +10,8 @@ Install from F-Droid, or download APK from GitHub.
 [<img src="https://img.shields.io/badge/GitHub%20Releases-100000?style=for-the-badge&logo=github"
       alt="Get it on GitHub"
       hspace="16"
-      height="50">](https://github.com/nonbili/NouTube/releases/latest)
+      height="50">](https://github.com/fserradilla65-afk/NouMusic/releases/latest)
 
-Find Linux, macOS, Windows versions in [NouTube-Desktop](https://github.com/nonbili/NouTube-Desktop).
 
 ## Features
 
@@ -29,13 +28,13 @@ Find Linux, macOS, Windows versions in [NouTube-Desktop](https://github.com/nonb
 
 ## How it works
 
-- Wrap https://m.youtube.com and https://music.youtube.com in Android webview
+- Wrap https://music.youtube.com in Android webview
 - Inject code to block ads
 - Hook playback controls and support playing in background
 
 ## Screenshots
 
-<img src="metadata/en-US/images/phoneScreenshots/1.jpg" width="240" alt="youtube"> <img src="metadata/en-US/images/phoneScreenshots/2.jpg" width="240" alt="youtube-music"> <img src="metadata/en-US/images/phoneScreenshots/3.jpg" width="240" alt="music-library">
+<img src="metadata/en-US/images/phoneScreenshots/2.jpg" width="240" alt="youtube-music"> <img src="metadata/en-US/images/phoneScreenshots/3.jpg" width="240" alt="music-library">
 
 ## Contributing
 

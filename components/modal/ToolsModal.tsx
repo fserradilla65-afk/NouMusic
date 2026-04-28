@@ -46,7 +46,12 @@ export const ToolsModal = () => {
       .listFormats(targetUrl)
       .then((result) => {
         if (loadingUrlRef.current !== targetUrl) return
-        setFormats(result.formats)
+        const audioOnly = result.formats.filter(
+          (f) =>
+            f.label.toLowerCase().includes('audio only') ||
+            (f.description.toLowerCase().includes('audio') && !f.description.toLowerCase().includes('video')),
+        )
+        setFormats(audioOnly.length > 0 ? audioOnly : result.formats)
         setParsedTitle(result.title)
         setPhase('choosing')
       })

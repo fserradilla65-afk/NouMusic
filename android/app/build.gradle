@@ -83,21 +83,27 @@ def jscFlavor = 'io.github.react-native-community:jsc-android:2026004.+'
 
 ext.abiCodes = [x86:1, x86_64:2, 'armeabi-v7a':3, 'arm64-v8a': 4]
 
+ext.abiCodes = [x86:1, x86_64:2, 'armeabi-v7a':3, 'arm64-v8a': 4]
+
+ext.abiCodes = [x86:1, x86_64:2, 'armeabi-v7a':3, 'arm64-v8a': 4]
+
 android {
     ndkVersion rootProject.ext.ndkVersion
 
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'jp.nonbili.noutube'
+    namespace 'jp.nonbili.noumusic'
     defaultConfig {
-        applicationId 'jp.nonbili.noutube'
+        applicationId 'jp.nonbili.noumusic'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 52
         versionName "0.5.3"
 
         buildConfigField "String", "REACT_NATIVE_RELEASE_LEVEL", "\"${findProperty('reactNativeReleaseLevel') ?: 'stable'}\""
+        resourceConfigurations += ["en", "de", "fr", "id", "b+pt+BR", "ru", "b+zh+Hans"]
+        resourceConfigurations += ["en", "de", "fr", "id", "b+pt+BR", "ru", "b+zh+Hans"]
         resourceConfigurations += ["en", "de", "fr", "id", "b+pt+BR", "ru", "b+zh+Hans"]
     }
     signingConfigs {
@@ -129,6 +135,46 @@ android {
     }
     androidResources {
         ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~'
+    }
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
+    splits {
+        abi {
+            reset()
+            enable true
+            universalApk false
+            include project.ext.abiCodes.keySet() as String[]
+        }
+    }
+    android.applicationVariants.configureEach { variant ->
+        variant.outputs.each { output ->
+            def baseAbiVersionCode = project.ext.abiCodes.get(output.getFilter(com.android.build.OutputFile.ABI))
+            if (baseAbiVersionCode != null) {
+                output.versionCodeOverride = (100 * project.android.defaultConfig.versionCode) + baseAbiVersionCode
+            }
+        }
+    }
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
+    splits {
+        abi {
+            reset()
+            enable true
+            universalApk false
+            include project.ext.abiCodes.keySet() as String[]
+        }
+    }
+    android.applicationVariants.configureEach { variant ->
+        variant.outputs.each { output ->
+            def baseAbiVersionCode = project.ext.abiCodes.get(output.getFilter(com.android.build.OutputFile.ABI))
+            if (baseAbiVersionCode != null) {
+                output.versionCodeOverride = (100 * project.android.defaultConfig.versionCode) + baseAbiVersionCode
+            }
+        }
     }
     dependenciesInfo {
         includeInApk = false

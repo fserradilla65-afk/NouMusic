@@ -7,7 +7,7 @@ const intentFilters = [
   {
     autoVerify: false,
     action: 'VIEW',
-    data: ['youtube.com', 'm.youtube.com', 'music.youtube.com', 'www.youtube.com', 'youtu.be'].map((host) => ({
+    data: ['music.youtube.com'].map((host) => ({
       scheme: 'https',
       host,
     })),
@@ -17,16 +17,16 @@ const intentFilters = [
 
 module.exports = ({ config }: { config: ExpoConfig }) => {
   return {
-    name: 'NouTube',
-    slug: 'noutube',
+    name: 'NouMusic',
+    slug: 'noumusic',
     version,
     icon: './assets/images/icon.png',
-    scheme: 'noutube',
+    scheme: 'noumusic',
     userInterfaceStyle: 'automatic',
     newArchEnabled: true,
     ios: {
       supportsTablet: true,
-      bundleIdentifier: 'jp.nonbili.noutube',
+      bundleIdentifier: 'jp.nonbili.noumusic',
     },
     android: {
       versionCode,
@@ -38,7 +38,7 @@ module.exports = ({ config }: { config: ExpoConfig }) => {
       },
       edgeToEdgeEnabled: true,
       predictiveBackGestureEnabled: false,
-      package: 'jp.nonbili.noutube',
+      package: 'jp.nonbili.noumusic',
       intentFilters,
     },
     web: {

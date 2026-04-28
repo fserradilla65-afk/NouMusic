@@ -41,8 +41,8 @@ export const settings$ = observable<Store>({
   setLanguage: (language) => {
     settings$.language.set(normalizeI18nLanguage(language))
   },
-  home: 'yt',
-  isYTMusic: (): boolean => settings$.home.get() === 'yt-music',
+  home: 'yt-music',
+  isYTMusic: (): boolean => true,
 
   autoHideHeader: false,
   hideToolbarWhenScrolled: false,

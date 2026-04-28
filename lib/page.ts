@@ -38,14 +38,20 @@ export function getThumbnail(url: string) {
 }
 
 export function openSharedUrl(url: string) {
-  if (url.startsWith('noutube:auth')) {
+  if (url.startsWith('noumusic:auth')) {
     onReceiveAuthUrl(url)
     return
   }
   try {
-    const { host } = new URL(fixSharingUrl(url))
-    if (['youtube.com', 'www.youtube.com', 'm.youtube.com', 'music.youtube.com', 'youtu.be'].includes(host)) {
-      updateUrl(url.replace('noutube://', 'https://'))
+    const fixedUrl = fixSharingUrl(url)
+    const parsed = new URL(fixedUrl)
+    if (['youtube.com', 'www.youtube.com', 'm.youtube.com', 'youtu.be'].includes(parsed.host)) {
+      parsed.host = 'music.youtube.com'
+      updateUrl(parsed.href)
+      return
+    }
+    if (parsed.host === 'music.youtube.com') {
+      updateUrl(fixedUrl.replace('noumusic://', 'https://'))
     }
   } catch (error) {
     console.error(error)
@@ -57,6 +63,4 @@ export const setPageUrl = debounce(async function (url: string) {
     return
   }
   ui$.pageUrl.set(url)
-  const { host } = new URL(url)
-  settings$.home.set(host === 'music.youtube.com' ? 'yt-music' : 'yt')
 }, 300)

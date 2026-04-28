@@ -152,7 +152,7 @@ export const MainPageContent: React.FC<{ contentJs: string }> = ({ contentJs }) 
 
   useEffect(() => {
     if (!ui$.url.get()) {
-      ui$.url.set(isYTMusic ? 'https://music.youtube.com' : isWeb ? 'https://www.youtube.com' : 'https://m.youtube.com')
+      ui$.url.set('https://music.youtube.com')
     }
   }, [])
 

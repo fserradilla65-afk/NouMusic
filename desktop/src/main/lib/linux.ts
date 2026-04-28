@@ -5,12 +5,12 @@ import os from 'os'
 import path from 'path'
 
 const templateDesktopFile = (exec: string, icon: string) => `[Desktop Entry]
-Name=NouTube
+Name=NouMusic
 Exec=${exec} %u
 Type=Application
 Categories=AudioVideo;Network;Utility;
 Icon=${icon}
-MimeType=x-scheme-handler/noutube;
+MimeType=x-scheme-handler/noumusic;
 `
 
 export async function genDesktopFile() {
@@ -21,11 +21,11 @@ export async function genDesktopFile() {
   const iconSrcPath = path.join(__dirname, '../../../app.asar.unpacked/resources/icon.png')
   const iconDstDir = path.join(os.homedir(), '.local/share/icons')
   await fs.mkdir(iconDstDir, { recursive: true })
-  const iconDstpath = path.join(iconDstDir, 'noutube.png')
+  const iconDstpath = path.join(iconDstDir, 'noumusic.png')
   await fs.copyFile(iconSrcPath, iconDstpath)
 
-  const desktopPath = path.join(os.homedir(), '.local/share/applications/noutube.desktop')
+  const desktopPath = path.join(os.homedir(), '.local/share/applications/noumusic.desktop')
   await fs.writeFile(desktopPath, templateDesktopFile(process.env.APPIMAGE!, iconDstpath))
   // https://github.com/electron-userland/electron-builder/issues/4035#issuecomment-512331963
-  childProcess.exec('xdg-mime default noutube.desktop x-scheme-handler/noutube')
+  childProcess.exec('xdg-mime default noumusic.desktop x-scheme-handler/noumusic')
 }

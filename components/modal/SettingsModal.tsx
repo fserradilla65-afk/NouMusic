@@ -26,7 +26,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { queryClient } from '@/lib/query/client'
 import { getReleaseFeedQuery } from '@/lib/query/changelog'
 
-const repo = 'https://github.com/nonbili/NouTube'
+const repo = 'https://github.com/fserradilla65-afk/NouMusic'
 const donateLinks = [
   { label: 'GitHub Sponsors', detail: 'github.com/sponsors/rnons', url: 'https://github.com/sponsors/rnons' },
   { label: 'Liberapay', detail: 'liberapay.com/rnons', url: 'https://liberapay.com/rnons' },
@@ -369,7 +369,7 @@ export const SettingsModal = () => {
       <View className="gap-6">
         <View className="rounded-[28px] border border-zinc-300 dark:border-zinc-800 bg-zinc-100/80 dark:bg-zinc-900/80 px-5 py-5">
           <NouText className="text-[11px] uppercase tracking-[0.18em] text-zinc-600 dark:text-zinc-500">
-            NouTube
+            NouMusic
           </NouText>
           <NouText className="mt-2 text-xl font-semibold tracking-tight">v{appVersion}</NouText>
         </View>

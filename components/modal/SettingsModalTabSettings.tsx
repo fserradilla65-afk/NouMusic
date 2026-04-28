@@ -354,7 +354,7 @@ export const SettingsTransferContent: React.FC<{
       .get()
       .map((x) => x.url)
       .join('\n')
-    const filename = `NouTube_bookmarks_${Date.now()}.txt`
+    const filename = `NouMusic_bookmarks_${Date.now()}.txt`
     await saveFile(filename, content)
   }
 

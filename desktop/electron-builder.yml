@@ -1,5 +1,5 @@
-appId: jp.nonbili.noutube
-productName: NouTube
+appId: jp.nonbili.noumusic
+productName: NouMusic
 directories:
   buildResources: build
 files:
@@ -13,11 +13,11 @@ files:
 asarUnpack:
   - resources/**
 protocols:
-  - name: NouTube
+  - name: NouMusic
     schemes:
-      - noutube
+      - noumusic
 win:
-  executableName: noutube
+  executableName: noumusic
 nsis:
   artifactName: ${productName}-${version}-setup.${ext}
   shortcutName: ${productName}
@@ -25,7 +25,7 @@ nsis:
   createDesktopShortcut: always
 appx:
   artifactName: ${productName}-${version}.${ext}
-  identityName: NonbiliInc.NouTube
+  identityName: NonbiliInc.NouMusic
   publisher: CN=E9477937-876C-417D-81DD-D63DDBACDEC2
   publisherDisplayName: Nonbili
 mac:
@@ -46,4 +46,4 @@ npmRebuild: false
 publish:
   provider: github
   owner: nonbili
-  repo: NouTube-Desktop
+  repo: NouMusic-Desktop

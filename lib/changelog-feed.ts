@@ -1,4 +1,4 @@
-const MOBILE_RELEASES_FEED_URL = 'https://github.com/nonbili/NouTube/releases.atom'
+const MOBILE_RELEASES_FEED_URL = 'https://github.com/fserradilla65-afk/NouMusic/releases.atom'
 
 export async function fetchReleaseFeed() {
   const res = await fetch(MOBILE_RELEASES_FEED_URL, {

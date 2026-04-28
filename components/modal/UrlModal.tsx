@@ -48,7 +48,7 @@ export const UrlModal = () => {
           <NouText className="text-zinc-600 dark:text-gray-400 text-sm">Supported URLs</NouText>
           <NouText className="text-zinc-500 dark:text-gray-500 text-sm">https://*.youtube.com/*</NouText>
           <NouText className="text-zinc-500 dark:text-gray-500 text-sm">https://youtu.be/*</NouText>
-          <NouText className="text-zinc-500 dark:text-gray-500 text-sm">noutube:*</NouText>
+          <NouText className="text-zinc-500 dark:text-gray-500 text-sm">noumusic:*</NouText>
         </View>
         <View className="flex-row items-center justify-between mt-6">
           <NouButton variant="outline" size="1" onPress={onClose}>

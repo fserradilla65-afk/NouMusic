@@ -5,7 +5,7 @@ import {
   transformGetWatchResponse,
   transformPlayerResponse,
   transformSearchResponse,
-} from 'noutube/lib/intercept'
+} from 'noumusic/lib/intercept'
 
 function transformHtml(html: string) {
   const $ = cheerio.load(html)

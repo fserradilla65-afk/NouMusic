@@ -177,12 +177,6 @@ export const NouHeader: React.FC<{ noutube: any }> = ({ noutube }) => {
           trigger={isWeb ? <MaterialButton name="more-vert" /> : isIos ? 'ellipsis' : 'filled.MoreVert'}
           items={[
             {
-              label: isYTMusic ? 'YouTube' : 'YouTube Music',
-              icon: <MaterialIcons name={isYTMusic ? 'video-library' : 'library-music'} size={18} color={headerControlColor} />,
-              systemImage: isYTMusic ? 'play.rectangle.stack' : 'music.note.house',
-              handler: onToggleHome,
-            },
-            {
               label: t('modals.history'),
               icon: <MaterialIcons name="history" size={18} color={headerControlColor} />,
               systemImage: 'clock.arrow.circlepath',

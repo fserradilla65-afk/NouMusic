@@ -45,7 +45,7 @@ export const SettingsModalTabSync = () => {
                   href="https://noutube.inks.page/auth/app"
                   target="_blank"
                 >
-                  Login NouTube
+                  Login NouMusic
                 </NouLink>
               </View>
             </View>

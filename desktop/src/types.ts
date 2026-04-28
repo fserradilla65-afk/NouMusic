@@ -2,7 +2,7 @@
 
 declare global {
   interface Window {
-    noutubeDeeplink: (link: string) => void
+    noumusicDeeplink: (link: string) => void
   }
 }
 

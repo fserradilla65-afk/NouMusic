@@ -7,10 +7,10 @@ import { app } from 'electron'
 export function bindDeeplink() {
   if (process.defaultApp) {
     if (process.argv.length >= 2) {
-      app.setAsDefaultProtocolClient('noutube', process.execPath, [path.resolve(process.argv[1])])
+      app.setAsDefaultProtocolClient('noumusic', process.execPath, [path.resolve(process.argv[1])])
     }
   } else {
-    app.setAsDefaultProtocolClient('noutube')
+    app.setAsDefaultProtocolClient('noumusic')
   }
 
   if (!app.requestSingleInstanceLock()) {
