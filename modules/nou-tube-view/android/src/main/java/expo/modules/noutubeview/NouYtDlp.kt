@@ -290,6 +290,13 @@ internal class NouYtDlp(private val context: Context) {
   }
 
   private fun publishToDownloads(sourceFile: File): Uri {
+    if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) {
+      val downloadsDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+      val destFile = File(downloadsDir, sourceFile.name)
+      sourceFile.copyTo(destFile, overwrite = true)
+      return Uri.fromFile(destFile)
+    }
+
     val extension = sourceFile.extension.lowercase()
     val mimeType = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension).orEmpty()
     val values = ContentValues().apply {

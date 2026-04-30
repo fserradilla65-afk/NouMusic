@@ -158,7 +158,7 @@ class NouTubeView(context: Context, appContext: AppContext) : ExpoView(context, 
         gestureDetector.onTouchEvent(event)
         false
       }
-      webViewClient =        object : WebViewClient() {
+      webViewClient = object : WebViewClient() {
           override fun doUpdateVisitedHistory(view: WebView, url: String, isReload: Boolean) {
             if (pageUrl != url) {
               pageUrl = url

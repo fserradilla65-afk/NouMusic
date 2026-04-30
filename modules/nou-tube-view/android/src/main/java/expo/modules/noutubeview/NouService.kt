@@ -6,6 +6,7 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.app.Service
+import android.content.pm.ServiceInfo
 import android.bluetooth.BluetoothDevice
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -248,7 +249,11 @@ class NouService : Service() {
 
       notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
       notificationManager?.createNotificationChannel(channel)
-      startForeground(NOTIFICATION_ID, notification)
+      if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
+        startForeground(NOTIFICATION_ID, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK)
+      } else {
+        startForeground(NOTIFICATION_ID, notification)
+      }
     }
     notificationManager?.notify(
       NOTIFICATION_ID,

@@ -30,7 +30,17 @@ module.exports = ({ config }: { config: ExpoConfig }) => {
     },
     android: {
       versionCode,
-      permissions: ['RECORD_AUDIO', 'MODIFY_AUDIO_SETTINGS'],
+      permissions: [
+        'RECORD_AUDIO',
+        'MODIFY_AUDIO_SETTINGS',
+        'CAMERA',
+        'FOREGROUND_SERVICE',
+        'FOREGROUND_SERVICE_MEDIA_PLAYBACK',
+        'BLUETOOTH',
+        'BLUETOOTH_CONNECT',
+        'READ_EXTERNAL_STORAGE',
+        'WRITE_EXTERNAL_STORAGE',
+      ],
       adaptiveIcon: {
         foregroundImage: './assets/images/adaptive-icon.png',
         monochromeImage: './assets/images/monochrome-icon.png',
