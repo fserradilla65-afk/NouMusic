@@ -23,6 +23,15 @@ const cssContent = css`
     display: none !important;
   }
 
+  body.nou-audio-only video {
+    visibility: hidden !important;
+  }
+
+  body.nou-audio-only .ytp-chrome-controls,
+  body.nou-audio-only .ytp-chrome-bottom {
+    visibility: visible !important;
+  }
+
   #_nou_livechat {
     width: 100%;
     height: 50vh;
@@ -115,6 +124,14 @@ export function injectCSS() {
 
   const update = () => {
     const userStyles = window.NouTube?.getUserStyles?.()
+    const settings = window.NouTube?.getSettings?.()
+
+    if (settings?.audioOnly) {
+      document.body.classList.add('nou-audio-only')
+    } else {
+      document.body.classList.remove('nou-audio-only')
+    }
+
     style.textContent = getInjectedCss(userStyles)
   }
 

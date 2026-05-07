@@ -9,7 +9,7 @@ import { NouMenu } from '../menu/NouMenu'
 import { getDocumentAsync } from 'expo-document-picker'
 import { importCsv, importList, importZip } from '@/lib/import'
 import { onClearData$, ui$ } from '@/states/ui'
-import NouTubeViewModule from '@/modules/nou-tube-view'
+import NouTubeViewModule, { NouTubeView } from '@/modules/nou-tube-view'
 import { showToast } from '@/lib/toast'
 import { showConfirm } from '@/lib/confirm'
 import JSZip from 'jszip'
@@ -125,6 +125,12 @@ export const SettingsPreferencesContent = () => {
           icon="restore"
           value={settings.restoreOnStart}
           onPress={() => settings$.restoreOnStart.set(!settings.restoreOnStart)}
+        />
+        <SettingsToggleRow
+          label={t('settings.audioOnly')}
+          icon="music-note"
+          value={settings.audioOnly}
+          onPress={() => settings$.audioOnly.set(!settings.audioOnly)}
         />
         <SettingsToggleRow
           label={t('settings.hideShorts')}

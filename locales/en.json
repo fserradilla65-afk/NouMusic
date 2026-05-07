@@ -179,6 +179,7 @@
     },
     "channelsFeed": "Channels feed",
     "watchHistory": "Watch history",
+    "audioOnly": "Audio only",
     "theme": {
       "label": "YouTube Theme",
       "system": "System",

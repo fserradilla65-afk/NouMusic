@@ -9,7 +9,7 @@ import { createDefaultUserStylesSnapshot, type UserStylesSnapshot } from '../lib
 export const noutubeSettingsEvent = 'noutube:settings'
 export const noutubeUserStylesEvent = 'noutube:user-styles'
 
-let settings = {}
+let settings: Record<string, any> = {}
 let userStyles = createDefaultUserStylesSnapshot()
 
 const getPlayer = (): any => document.getElementById('movie_player')
@@ -49,6 +49,7 @@ export function initNouTube() {
   return {
     getSettings,
     setSettings,
+    updateSettings: setSettings,
     getUserStyles,
     setUserStyles,
     shortsHidden: true,

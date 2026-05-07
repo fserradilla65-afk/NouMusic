@@ -1,0 +1,232 @@
+{
+  "about": {
+    "label": "Acerca de",
+    "code": "Código fuente",
+    "donate": "Donar",
+    "hint": "Información de la versión, código fuente y enlaces de soporte."
+  },
+  "changelog": {
+    "label": "Historial de cambios",
+    "hint": "Últimos lanzamientos y correcciones desde GitHub.",
+    "loading": "Cargando notas de la versión...",
+    "error": "Error al cargar las notas de la versión.",
+    "retry": "Reintentar",
+    "empty": "No se encontraron notas de la versión.",
+    "current": "Actual",
+    "noNotes": "No se proporcionaron notas de la versión para esta versión."
+  },
+  "buttons": {
+    "clear": "Limpiar",
+    "clearAll": "Limpiar todo",
+    "import": "Importar",
+    "export": "Exportar",
+    "open": "Abrir",
+    "cancel": "Cancelar",
+    "openUrl": "Abrir URL",
+    "move": "Mover",
+    "save": "Guardar",
+    "remove": "Eliminar",
+    "unsubscribe": "Anular suscripción",
+    "signOut": "Cerrar sesión",
+    "next": "Siguiente",
+    "show": "Mostrar",
+    "download": "Descargar",
+    "browse": "Explorar",
+    "updateYtDlp": "Actualizar yt-dlp",
+    "updating": "Actualizando...",
+    "ytDlpUpdated": "yt-dlp está actualizado"
+  },
+  "library": {
+    "videos": "Vídeos",
+    "channels": "Canales",
+    "playlists": "Listas de reproducción",
+    "songs": "Canciones",
+    "artists": "Artistas"
+  },
+  "menus": {
+    "edit": "Editar",
+    "remove": "Eliminar",
+    "unsubscribe": "Anular suscripción",
+    "reload": "Recargar",
+    "share": "Compartir",
+    "tools": "Herramientas",
+    "desktop": "Sitio de escritorio",
+    "on": "Activado",
+    "off": "Desactivado"
+  },
+  "modals": {
+    "editBookmark": "Editar marcador",
+    "title": "Título",
+    "folder": "Carpeta",
+    "ungrouped": "Sin agrupar",
+    "feeds": "Feeds",
+    "history": "Historial",
+    "queue": "Cola",
+    "downloadVideo": "Descargar vídeo",
+    "downloadsFolder": "Carpeta de descargas",
+    "activeDownloads": "Descargas activas",
+    "downloadHistory": "Historial de descargas",
+    "starting": "Iniciando...",
+    "downloadComplete": "Descarga completada",
+    "downloadFailed": "Descarga fallida",
+    "failedToLoadFormats": "Error al cargar formatos",
+    "playbackSpeed": "Velocidad de reproducción"
+  },
+  "sleepTimer": {
+    "label": "Temporizador de apagado",
+    "hint": "Pausa la reproducción después de una duración preestablecida o tu propio valor en minutos.",
+    "activeHint": "La reproducción se pausará después de que termine esta cuenta atrás.",
+    "off": "Desactivado",
+    "endsIn": "Termina en {{value}}",
+    "preset": "{{value}} min",
+    "customPlaceholder": "Minutos personalizados",
+    "set": "Configurar temporizador",
+    "cancel": "Cancelar temporizador",
+    "replace": "Reemplazar",
+    "validation": {
+      "minutes": "Introduce un número entero de minutos entre 1 y 1440"
+    },
+    "setToast": "Temporizador de apagado configurado para {{value}} minutos",
+    "cancelToast": "Temporizador de apagado cancelado",
+    "expiredToast": "El temporizador de apagado ha expirado"
+  },
+  "feeds": {
+    "updates": "Actualizaciones",
+    "manage": "Gestionar",
+    "sortLastVideo": "Último vídeo",
+    "sortFrequency": "Frecuencia",
+    "lastVideoNewest": "Último vídeo: más reciente primero",
+    "lastVideoOldest": "Último vídeo: más antiguo primero",
+    "frequencyHighest": "Frecuencia: mayor primero",
+    "frequencyLowest": "Frecuencia: menor primero",
+    "frequencyLabel": "Frecuencia",
+    "lastVideoLabel": "Último vídeo",
+    "videosPerDay": "{{value}} vídeos/día",
+    "never": "Nunca",
+    "allFolders": "Todos",
+    "newFolder": "+ Nueva carpeta",
+    "editFeed": "Editar feed",
+    "manageEmpty": "Aún no hay feeds guardados.",
+    "manageNoResults": "Ningún feed coincide con los filtros actuales.",
+    "updatesEmpty": "Ningún vídeo del feed coincide con el filtro de carpeta actual.",
+    "filterDropdownPlaceholder": "Filtrar carpetas y canales",
+    "filterDropdownEmpty": "No coinciden carpetas ni canales.",
+    "emptyTitleNoChannels": "No hay canales destacados",
+    "emptyBodyNoChannels": "Las actualizaciones de los canales de YouTube destacados aparecerán aquí.",
+    "emptyTitleFolder": "No hay actualizaciones en {{folder}}",
+    "emptyTitleChannel": "No hay actualizaciones de {{channel}}",
+    "emptyBodyFiltered": "No hay vídeos recientes aquí en este momento. Vuelve más tarde o cambia a 'Todos'.",
+    "emptyActionFetchNow": "Actualizar ahora",
+    "fetchToastSuccess": "Feed actualizado",
+    "fetchToastRunning": "Actualización ya en curso",
+    "fetchToastNotFound": "No se pudo actualizar este canal. El feed devolvió 404.",
+    "fetchToastError": "No se pudo actualizar este canal",
+    "emptyActionAllFolders": "Mostrar todos",
+    "emptyTitleWaiting": "Esperando actualizaciones del feed",
+    "emptyBodyWaiting": "Tus canales guardados están listos. Mantén la aplicación abierta un momento o vuelve a abrirla más tarde, y aparecerán las subidas recientes.",
+    "removeTitle": "¿Eliminar {{title}}?",
+    "removeMessage": "Esto elimina el canal de la Biblioteca y borra los vídeos de su feed."
+  },
+  "settings": {
+    "label": "Ajustes",
+    "hubHint": "Reproducción, sincronización, importación y herramientas de webview en un solo lugar.",
+    "general": "General",
+    "generalHint": "Valores predeterminados de reproducción, apariencia, herramientas y transferencia de datos.",
+    "preferences": "Preferencias",
+    "preferencesHint": "Comportamiento de reproducción, feed e historial.",
+    "appearance": "Apariencia",
+    "appearanceHint": "Controla cómo se ve YouTube dentro de la aplicación.",
+    "tools": "Herramientas",
+    "toolsHint": "Gestiona el entorno del webview y otras herramientas.",
+    "transfer": "Importar y exportar",
+    "transferHint": "Trae tus marcadores o llévatelos contigo.",
+    "syncHintShort": "Cuenta, plan y sincronización de dispositivos.",
+    "restoreOnStart": "Restaurar última reproducción al iniciar",
+    "autoHideHeader": "Ocultar y mostrar la barra de herramientas al desplazar",
+    "hideToolbarWhenScrolled": "Ocultar barra cuando la página no esté arriba",
+    "hideShorts": "Ocultar shorts en la línea de tiempo",
+    "hideShortsInNavbar": "Ocultar shorts en la barra de navegación",
+    "hideMixPlaylist": "Ocultar lista de reproducción mixta",
+    "userStyles": {
+      "label": "Estilos de usuario",
+      "hint": "Ajustes CSS integrados y tu propio CSS específico del sitio.",
+      "builtin": {
+        "label": "Estilos integrados",
+        "hideShortsInNavbar": {
+          "label": "Ocultar Shorts en la barra de navegación"
+        },
+        "hideMixPlaylist": {
+          "label": "Ocultar lista de reproducción mixta"
+        }
+      },
+      "custom": {
+        "label": "Estilos personalizados",
+        "empty": "Aún no hay estilos personalizados."
+      },
+      "add": "Añadir estilo",
+      "addTitle": "Añadir estilo de usuario",
+      "editTitle": "Editar estilo de usuario",
+      "nameLabel": "Nombre",
+      "namePlaceholder": "Mi estilo",
+      "validation": {
+        "css": "El CSS no puede estar vacío"
+      },
+      "deleteConfirm": "¿Eliminar este estilo personalizado?",
+      "copyCss": "Copiar CSS",
+      "cssCopied": "CSS copiado",
+      "copyFailed": "Error al copiar CSS",
+      "importFailed": "Error al importar CSS"
+    },
+    "channelsFeed": "Feed de canales",
+    "watchHistory": "Historial de reproducción",
+    "audioOnly": "Sólo audio",
+    "theme": {
+      "label": "Tema de YouTube",
+      "system": "Sistema",
+      "dark": "Oscuro",
+      "light": "Claro",
+      "hint": "Reinicia manualmente si el cambio no se refleja en el webview."
+    },
+    "language": {
+      "label": "Idioma",
+      "system": "Sistema",
+      "hint": "Elige un idioma o sigue el idioma del sistema."
+    },
+    "login": {
+      "label": "Prueba esto si no pudiste iniciar sesión desde el webview",
+      "button": "Iniciar sesión en YouTube"
+    },
+    "openUrlLabel": "Abrir URL compatible directamente",
+    "webview": {
+      "clearLabel": "Limpiar datos del webview"
+    },
+    "userAgent": {
+      "title": "User agent personalizado",
+      "default": "User agent predeterminado"
+    },
+    "importList": "Importar una lista de enlaces",
+    "importTakeout": "Importar desde YouTube Takeout",
+    "exportLabel": "Exportar marcadores a una lista",
+    "injectCookie": "Inyectar cookie si no pudiste iniciar sesión",
+    "injectCookieTitle": "Inyectar cookie de autenticación en el webview",
+    "injectCookieHint": "Copia el valor del encabezado Cookie de tu navegador de PC. Esto es una alternativa cuando no puedes iniciar sesión con correo/contraseña."
+  },
+  "native": {
+    "format_bestQuality": "Mejor calidad",
+    "format_bestQualityDesc": "Hasta {{height}}p vídeo + audio",
+    "format_1080pDesc": "1080p vídeo + audio",
+    "format_720pDesc": "720p vídeo + audio",
+    "format_audioOnly": "Sólo audio",
+    "format_audio": "Audio ({{ext}})",
+    "format_audioStreamDesc": "Mejor flujo de audio",
+    "format_audioMp3Desc": "Mejor audio transcodificado a MP3",
+    "download_complete": "Descarga completada",
+    "download_failed": "Descarga fallida"
+  },
+  "sync": {
+    "label": "Sincronización",
+    "hint": "Sincroniza tus marcadores entre tus teléfonos y ordenadores como usuario premium.",
+    "currentPlan": "Plan actual",
+    "managePlan": "Gestionar plan"
+  }
+}

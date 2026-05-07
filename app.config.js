@@ -1,7 +1,4 @@
-import 'ts-node/register'
-
-import { ExpoConfig } from 'expo/config'
-import { version, versionCode } from './package.json'
+const { version, versionCode } = require('./package.json')
 
 const intentFilters = [
   {
@@ -15,12 +12,13 @@ const intentFilters = [
   },
 ]
 
-module.exports = ({ config }: { config: ExpoConfig }) => {
+module.exports = ({ config }) => {
   return {
+    ...config,
     name: 'NouMusic',
     slug: 'noumusic',
     version,
-    icon: './assets/images/icon.png',
+    icon: './assets/images/sandia.png',
     scheme: 'noumusic',
     userInterfaceStyle: 'automatic',
     newArchEnabled: true,
@@ -42,7 +40,7 @@ module.exports = ({ config }: { config: ExpoConfig }) => {
         'WRITE_EXTERNAL_STORAGE',
       ],
       adaptiveIcon: {
-        foregroundImage: './assets/images/adaptive-icon.png',
+        foregroundImage: './assets/images/sandia.png',
         monochromeImage: './assets/images/monochrome-icon.png',
         backgroundColor: '#ffffff',
       },
@@ -57,17 +55,17 @@ module.exports = ({ config }: { config: ExpoConfig }) => {
       favicon: './assets/images/favicon.png',
     },
     plugins: [
-      './plugins/withAndroidPlugin.ts',
+      './plugins/withAndroidPlugin.js',
       'expo-router',
       [
         'expo-splash-screen',
         {
-          image: './assets/images/splash-icon.png',
+          image: './assets/images/sandia.png',
           imageWidth: 200,
           resizeMode: 'contain',
           backgroundColor: '#f9fafb',
           dark: {
-            image: './assets/images/splash-icon.png',
+            image: './assets/images/sandia.png',
             backgroundColor: '#27272a',
           },
         },
@@ -77,7 +75,8 @@ module.exports = ({ config }: { config: ExpoConfig }) => {
       [
         'expo-localization',
         {
-          supportedLocales: ['en', 'de', 'fr', 'id', 'pt-BR', 'ru', 'zh-Hans'],
+          // Usamos 'pt' en lugar de 'pt-BR' para evitar el error de AAPT
+          supportedLocales: ['en', 'de', 'es', 'fr', 'id', 'pt', 'ru', 'zh'],
         },
       ],
       'expo-share-intent',

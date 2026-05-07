@@ -27,11 +27,7 @@ import { queryClient } from '@/lib/query/client'
 import { getReleaseFeedQuery } from '@/lib/query/changelog'
 
 const repo = 'https://github.com/fserradilla65-afk/NouMusic'
-const donateLinks = [
-  { label: 'GitHub Sponsors', detail: 'github.com/sponsors/rnons', url: 'https://github.com/sponsors/rnons' },
-  { label: 'Liberapay', detail: 'liberapay.com/rnons', url: 'https://liberapay.com/rnons' },
-  { label: 'PayPal', detail: 'paypal.me/rnons', url: 'https://paypal.me/rnons' },
-]
+
 const surfaceCls =
   'overflow-hidden rounded-[24px] border border-zinc-300 dark:border-zinc-800 bg-zinc-100/80 dark:bg-zinc-900/70'
 const sectionLabelCls = 'mb-2 px-1 text-[11px] uppercase tracking-[0.18em] text-zinc-600 dark:text-zinc-500'
@@ -376,21 +372,13 @@ export const SettingsModal = () => {
 
         <SettingsSection label={t('about.code')}>
           <View className={surfaceCls}>
-            <SettingsExternalRow title="GitHub" detail="github.com/nonbili/NouTube" href={repo} icon="code" isLast />
-          </View>
-        </SettingsSection>
-
-        <SettingsSection label={t('about.donate')}>
-          <View className={surfaceCls}>
-            {donateLinks.map((item, index) => (
-              <SettingsExternalRow
-                key={item.url}
-                title={item.label}
-                detail={item.detail}
-                href={item.url}
-                isLast={index === donateLinks.length - 1}
-              />
-            ))}
+            <SettingsExternalRow
+              title="GitHub"
+              detail="github.com/fserradilla65-afk/NouMusic"
+              href={repo}
+              icon="code"
+              isLast
+            />
           </View>
         </SettingsSection>
       </View>

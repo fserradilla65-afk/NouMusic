@@ -20,6 +20,7 @@ interface Store {
   playbackRate: number
   restoreOnStart: boolean
   sponsorBlock: boolean
+  audioOnly: boolean
   showPlaybackSpeedControl: boolean
   userAgent: string
   desktopMode: boolean
@@ -54,6 +55,7 @@ export const settings$ = observable<Store>({
   playbackRate: 1,
   restoreOnStart: true,
   sponsorBlock: true,
+  audioOnly: false,
   showPlaybackSpeedControl: false,
   userAgent: '',
   desktopMode: false,
